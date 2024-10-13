@@ -41,6 +41,13 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, existingPost, open, onClo
     onClose();
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
+      handleSubmit();
+    }
+  };
+
   return (
     <Dialog
       open={open}
@@ -57,7 +64,11 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, existingPost, open, onClo
       <DialogTitle sx={{ fontWeight: 'bold', textAlign: 'center', backgroundColor: '#1d1d1d' }}>
         {existingPost ? 'Actualizar Post' : 'Crear Post'}
       </DialogTitle>
-      <Box component="form" sx={{ display: 'flex', flexDirection: 'column', padding: 2, backgroundColor: '#1d1d1d' }}>
+      <Box
+        component="form"
+        sx={{ display: 'flex', flexDirection: 'column', padding: 2, backgroundColor: '#1d1d1d' }}
+        onKeyDown={handleKeyDown} // Añadido el evento para manejar la tecla Enter
+      >
         <TextField
           label="Título"
           variant="outlined"
@@ -109,7 +120,6 @@ const PostForm: React.FC<PostFormProps> = ({ onSubmit, existingPost, open, onClo
           {existingPost ? 'Actualizar' : 'Crear'}
         </Button>
       </DialogActions>
-
     </Dialog>
   );
 };

@@ -8,10 +8,19 @@ interface ConfirmationDialogProps {
 }
 
 const ConfirmationDialog: React.FC<ConfirmationDialogProps> = ({ open, onClose, onConfirm }) => {
+  // Maneja el evento de teclado para detectar la tecla Enter
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Evitar el comportamiento predeterminado
+      onConfirm(); // Llamar a la función de confirmación
+    }
+  };
+
   return (
     <Dialog
       open={open}
       onClose={onClose}
+      onKeyDown={handleKeyDown} // Agregar el evento para detectar la tecla Enter
       sx={{
         '& .MuiDialog-paper': {
           backgroundColor: '#1e1e1e',

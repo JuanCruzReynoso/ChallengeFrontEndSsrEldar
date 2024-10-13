@@ -16,8 +16,8 @@ const PostItem: React.FC<PostItemProps> = ({ post, role, onEdit, onDelete }) => 
     <ListItem
       sx={{
         display: 'flex',
-        justifyContent: 'space-between', // Cambiado a 'center'
-        alignItems: 'center', // Asegura que los elementos estén centrados verticalmente
+        justifyContent: 'space-between',
+        alignItems: 'center',
         backgroundColor: 'background.paper',
         padding: '16px',
         borderRadius: '8px',
@@ -48,11 +48,11 @@ const PostItem: React.FC<PostItemProps> = ({ post, role, onEdit, onDelete }) => 
         <Box
           sx={{
             display: 'flex',
-            flexDirection: { xs: 'column', sm: 'row' },
+            flexDirection: { xs: 'row', sm: 'row' }, // Asegúrate de que sea 'row' en móviles
             gap: '10px',
             marginTop: { xs: '10px', sm: '0' },
-            justifyContent: 'center', // Centrar botones
-            alignItems: 'center', // Centrar verticalmente
+            justifyContent: 'center',
+            alignItems: 'center',
             width: { xs: '100%', sm: 'auto' },
           }}
         >
