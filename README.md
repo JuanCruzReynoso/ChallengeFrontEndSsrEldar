@@ -17,8 +17,8 @@ Bienvenidos a mi solución del challenge, este proyecto es una aplicación web q
 
 1. **Clona el repositorio**:
    ```bash
-   git clone <url-del-repositorio>
-   cd <nombre-del-repositorio>
+   git clone https://github.com/JuanCruzReynoso/ChallengeFrontEndSsrEldar
+   cd ChallengeFrontEndSsrEldar
    ```
 
 2. **Instala las dependencias**:
@@ -39,6 +39,7 @@ src/
 |-- components/          # Componentes reutilizables (botones, listas, formularios, alerts, popups)
 |-- contexts/            # Contextos para manejo de autenticación y roles
 |-- hooks/               # Hooks personalizados
+|-- mocks/               # Datos simulados para autenticación y pruebas
 |-- pages/               # Páginas de la aplicación (Login, Dashboard, Feed)
 |-- providers/           # Proveedores de contexto y autenticación
 |-- routes/              # Configuración de las rutas
