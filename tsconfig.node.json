@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",               // Extiende del tsconfig.json base
+  "compilerOptions": {
+    "target": "ES2022",                       // Establece el objetivo a ES2022
+    "lib": ["ES2023"],                        // Bibliotecas que se incluirán
+    "module": "ESNext",                       // Establece el módulo a ESNext
+    "skipLibCheck": true,                     // Salta la verificación de tipo de archivos de declaración
+    "moduleResolution": "bundler",            // Modo de resolución de módulos
+    "allowImportingTsExtensions": true,      // Permite importar extensiones .ts
+    "isolatedModules": true,                  // Aísla módulos
+    "moduleDetection": "force",               // Fuerza la detección de módulos
+    "noEmit": true,                          // No emite archivos
+
+    /* Linting */
+    "strict": true,                          // Habilita todas las verificaciones de tipo estrictas
+    "noUnusedLocals": true,                  // Informa sobre variables locales no utilizadas
+    "noUnusedParameters": true,               // Informa sobre parámetros no utilizados
+    "noFallthroughCasesInSwitch": true       // Informa sobre casos de caída en switch
+  },
+  "include": ["vite.config.ts"]              // Incluir el archivo de configuración de Vite
+}
