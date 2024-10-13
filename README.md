@@ -1,4 +1,3 @@
-```markdown
 # Eldar Frontend SSR Challenge
 
 Bienvenidos a mi solución del challenge, este proyecto es una aplicación web que implementa autenticación de usuarios y gestión de roles utilizando React, Material UI, y TypeScript.
@@ -85,4 +84,3 @@ src/
 - La autenticación se maneja mediante un token JWT simulado.
 - Los datos se obtienen de la API pública de [jsonplaceholder](https://jsonplaceholder.typicode.com/guide/).
 - La estructura del proyecto está organizada para facilitar la escalabilidad y la reutilización de componentes.
-```
